@@ -9,7 +9,7 @@ metadata:
     executables.ai.sap.com/name: "ollamal"
   labels:
     scenarios.ai.sap.com/id: "ollamal"
-    ai.sap.com/version: "0.0.1"
+    ai.sap.com/version: "0.0.2"
 spec:
   template:
     apiVersion: "serving.kserve.io/v1beta1"
@@ -42,7 +42,7 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 600
+            initialDelaySeconds: 300
             periodSeconds: 30
             timeoutSeconds: 10
             failureThreshold: 20
@@ -50,7 +50,7 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 900
+            initialDelaySeconds: 600
             periodSeconds: 60
             timeoutSeconds: 10
             failureThreshold: 5
